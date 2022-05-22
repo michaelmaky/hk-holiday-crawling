@@ -1,5 +1,5 @@
 import requests
-import json
+## import json
 
 
 def getHkHoliday():
@@ -7,6 +7,7 @@ def getHkHoliday():
 
     holidayList = {}
     res = requests.get('http://www.1823.gov.hk/common/ical/en.json')
+    res.encoding = 'utf-8-sig'
 
     reshoildayList = res.json()
     print("holiday data: ", reshoildayList)
